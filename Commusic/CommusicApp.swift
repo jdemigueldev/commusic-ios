@@ -11,7 +11,7 @@ import SwiftUI
 struct CommusicApp: App {
     var body: some Scene {
         WindowGroup {
-            ApiList()
+            ContentView()
         }
     }
 }

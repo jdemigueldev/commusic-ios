@@ -15,15 +15,12 @@ struct SearchBar: View {
     @State private var isEditing = false
     
     var body: some View {
-        HStack{
+        HStack {
+            Image(systemName: "magnifyingglass")
             TextField("Search ...", text: $text)
-                .padding(7)
-                .padding(.horizontal, 25)
-                .background(Color(.systemGray6))
-                .cornerRadius(8)
-                .padding(.horizontal, 10)
                 .onTapGesture {
                     self.isEditing = true
+                    
                 }
             if isEditing {
                 Button(action: {
@@ -36,13 +33,19 @@ struct SearchBar: View {
                 .padding(.trailing, 10)
                 .transition(.move(edge: .trailing))
                 .animation(.default)
+                
             }
         }
+        .padding(7)
+        .padding(.horizontal, 2)
+        .background(Color(.systemGray6))
+        .cornerRadius(8)
+        .padding(.horizontal, 10)
     }
 }
 //no se puede probar en preview
 struct SearchBar_Previews: PreviewProvider {
-   @State static var text = ""
+    @State static var text = ""
     static var previews: some View {
         SearchBar(text: $text)
     }

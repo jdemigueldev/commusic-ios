@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A644E7F72987D981005FAC0C /* APIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7F62987D981005FAC0C /* APIList.swift */; };
+		A644E7F92987DFAC005FAC0C /* ChatPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7F82987DFAC005FAC0C /* ChatPage.swift */; };
+		A644E7FB2987DFEB005FAC0C /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7FA2987DFEB005FAC0C /* ProfilePage.swift */; };
+		A644E7FD2987E018005FAC0C /* AddPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7FC2987E018005FAC0C /* AddPostPage.swift */; };
+		A644E7FF2987E2E7005FAC0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7FE2987E2E7005FAC0C /* ContentView.swift */; };
+		A644E8012987F4D1005FAC0C /* PostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E8002987F4D1005FAC0C /* PostItem.swift */; };
+		A644E8032988298B005FAC0C /* DetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E8022988298B005FAC0C /* DetailsPage.swift */; };
+		A644E80929882AD9005FAC0C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E80829882AD9005FAC0C /* Post.swift */; };
 		A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */; };
-		A6F7B541297FE76000AEFE81 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B540297FE76000AEFE81 /* PostListView.swift */; };
+		A6F7B541297FE76000AEFE81 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B540297FE76000AEFE81 /* HomePage.swift */; };
 		A6F7B543297FE76200AEFE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7B542297FE76200AEFE81 /* Assets.xcassets */; };
 		A6F7B546297FE76200AEFE81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7B545297FE76200AEFE81 /* Preview Assets.xcassets */; };
 		A6F7B54D297FEC5500AEFE81 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B54C297FEC5500AEFE81 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A644E7F62987D981005FAC0C /* APIList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIList.swift; sourceTree = "<group>"; };
+		A644E7F82987DFAC005FAC0C /* ChatPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPage.swift; sourceTree = "<group>"; };
+		A644E7FA2987DFEB005FAC0C /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		A644E7FC2987E018005FAC0C /* AddPostPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPage.swift; sourceTree = "<group>"; };
+		A644E7FE2987E2E7005FAC0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A644E8002987F4D1005FAC0C /* PostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItem.swift; sourceTree = "<group>"; };
+		A644E8022988298B005FAC0C /* DetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPage.swift; sourceTree = "<group>"; };
+		A644E80829882AD9005FAC0C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A6F7B53B297FE76000AEFE81 /* Commusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommusicApp.swift; sourceTree = "<group>"; };
-		A6F7B540297FE76000AEFE81 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		A6F7B540297FE76000AEFE81 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		A6F7B542297FE76200AEFE81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6F7B545297FE76200AEFE81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A6F7B54C297FEC5500AEFE81 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -34,6 +50,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6F4FBAE2981D01100CBB72F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A644E7F62987D981005FAC0C /* APIList.swift */,
+				A644E80829882AD9005FAC0C /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A6F4FBAF2981D01D00CBB72F /* Page VIews */ = {
+			isa = PBXGroup;
+			children = (
+				A6F7B540297FE76000AEFE81 /* HomePage.swift */,
+				A644E7F82987DFAC005FAC0C /* ChatPage.swift */,
+				A644E7FA2987DFEB005FAC0C /* ProfilePage.swift */,
+				A644E7FC2987E018005FAC0C /* AddPostPage.swift */,
+				A644E8022988298B005FAC0C /* DetailsPage.swift */,
+			);
+			path = "Page VIews";
+			sourceTree = "<group>";
+		};
+		A6F4FBB02981D02B00CBB72F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A6F7B54C297FEC5500AEFE81 /* SearchBar.swift */,
+				A644E8002987F4D1005FAC0C /* PostItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A6F7B532297FE76000AEFE81 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */,
-				A6F7B54C297FEC5500AEFE81 /* SearchBar.swift */,
-				A6F7B540297FE76000AEFE81 /* PostListView.swift */,
+				A6F4FBAE2981D01100CBB72F /* Model */,
+				A6F4FBB02981D02B00CBB72F /* Views */,
+				A6F4FBAF2981D01D00CBB72F /* Page VIews */,
 				A6F7B542297FE76200AEFE81 /* Assets.xcassets */,
 				A6F7B544297FE76200AEFE81 /* Preview Content */,
 			);
@@ -65,6 +112,7 @@
 		A6F7B544297FE76200AEFE81 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				A644E7FE2987E2E7005FAC0C /* ContentView.swift */,
 				A6F7B545297FE76200AEFE81 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -140,8 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6F7B541297FE76000AEFE81 /* PostListView.swift in Sources */,
+				A644E8012987F4D1005FAC0C /* PostItem.swift in Sources */,
+				A644E80929882AD9005FAC0C /* Post.swift in Sources */,
+				A644E7FB2987DFEB005FAC0C /* ProfilePage.swift in Sources */,
+				A6F7B541297FE76000AEFE81 /* HomePage.swift in Sources */,
+				A644E7FF2987E2E7005FAC0C /* ContentView.swift in Sources */,
+				A644E7F72987D981005FAC0C /* APIList.swift in Sources */,
+				A644E8032988298B005FAC0C /* DetailsPage.swift in Sources */,
+				A644E7F92987DFAC005FAC0C /* ChatPage.swift in Sources */,
 				A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */,
+				A644E7FD2987E018005FAC0C /* AddPostPage.swift in Sources */,
 				A6F7B54D297FEC5500AEFE81 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +334,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +363,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
