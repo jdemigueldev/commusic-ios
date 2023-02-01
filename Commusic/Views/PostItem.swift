@@ -7,30 +7,39 @@
 
 import SwiftUI
 
-struct PostItem: View {
+struct PostItem: View , Hashable{
     
-    //var post: Post
+    var post: Post
     
     var body: some View {
-        VStack {
-            AsyncImage(url: URL(string: ""))
-                .frame(width: 300, height: 150)
-                .background(Color("AccentColor"))
-                .aspectRatio(contentMode: .fit)
-                
+        
+    
             HStack {
+                AsyncImage(url: URL(string: ""))
+                //.frame(width: 300, height: 150)
+                    .frame(maxWidth: 300, maxHeight: 150, alignment: .leading)
+                    .background(Color("AccentColor"))
+                    .aspectRatio(contentMode: .fit)
+                
                 VStack(alignment: .leading) {
-                    Text("product.name")
+                    Text(post.title)
                         .font(.title3)
                         .bold()
                     //precio con solo dos decimales
-                    Text("precio")
+                    Text("$ \(post.price, specifier: "%.2f")")
                         .font(.caption)
                     
+                    
                 }.padding(8)
-                Spacer()
+                
+                
+                Button(action: {}) {
+                    Image(systemName: "bookmark")
+                        .padding()
+                }
+                .frame(maxHeight: 150, alignment: .bottom)
             }
-        }
+        
         .background(Color("SurfaceBackground"))
         .cornerRadius(10)
         .padding(.trailing)
@@ -40,6 +49,6 @@ struct PostItem: View {
 
 struct PostItem_Previews: PreviewProvider {
     static var previews: some View {
-        PostItem()
+        PostItem(post: Post(post_id: 1, user_id: 1, title: "Estudio Maricarmen", description: "Description", price: 1, upload_date: ""))
     }
 }

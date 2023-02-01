@@ -1,16 +1,14 @@
-//
-//  Post.swift
-//  Commusic
-//
-//  Created by Bluyin  on 30/1/23.
-//
+
 
 import Foundation
 
-//struct Post: Decodable, Identifiable {
-    //var id: Int
-    //var name: String
-    //var description: String
-    //var price: Double
+struct Post: Decodable, Hashable {
+    var post_id: Int
+    var user_id: Int
+    var title: String
+    var description: String
+    var price: Int
+    var upload_date: String
     //var image: String
-//}
+    //var date: Date
+}
