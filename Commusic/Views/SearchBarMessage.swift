@@ -1,23 +1,24 @@
 //
-//  SearchBar.swift
+//  SearchBarMessage.swift
 //  Commusic
 //
-//  Created by Bluyin  on 24/1/23.
+//  Created by Bluyin  on 7/2/23.
 //
 
 import SwiftUI
 
-
-struct SearchBar: View {
+struct SearchBarMessage: View {
     
-    
-    @Binding var text: String
+    @State var text: String = ""
     @State private var isEditing = false
     
     var body: some View {
+        
+        
         HStack {
             Image(systemName: "magnifyingglass")
             TextField("Search ...", text: $text)
+                .foregroundColor(Color("description"))
                 .onTapGesture {
                     self.isEditing = true
                     
@@ -33,20 +34,30 @@ struct SearchBar: View {
                 .padding(.trailing, 10)
                 .transition(.move(edge: .trailing))
                 .animation(.default)
+                .foregroundColor(Color("description"))
                 
             }
         }
         .padding(7)
         .padding(.horizontal, 2)
-        .background(Color(.systemGray6))
+        .background(Color("backgroundpost"))
         .cornerRadius(8)
         .padding(.horizontal, 10)
+        .foregroundColor(Color("description"))
+        .background (
+            RoundedRectangle(cornerRadius: 30).fill(Color("backgroundpost"))
+                .softInnerShadow(RoundedRectangle(cornerRadius: 30), darkShadow: Color.black, lightShadow: Color("description"), spread: 0.05, radius: 3)
+            
+        )
+        .padding()
+        
+        
     }
 }
-//no se puede probar en preview
-struct SearchBar_Previews: PreviewProvider {
+
+struct SearchBarMessage_Previews: PreviewProvider {
     @State static var text = ""
     static var previews: some View {
-        SearchBar(text: $text)
+        SearchBarMessage()
     }
 }

@@ -1,10 +1,9 @@
-
 import SwiftUI
 import Neumorphic
 
-struct HomePage: View {
+struct PruebaHomePage: View {
     
-    @State var Searchtext = ""
+    @State var searchText = ""
     @State var postsList = [Post]()
     @State private var currentPage = 0
     
@@ -14,18 +13,6 @@ struct HomePage: View {
         NavigationView {
             //ViewThatFits {
             VStack {
-                HStack {
-                    SearchBarPost()
-                        .padding(.top)
-                        .padding(.leading, 10)
-                    
-                    Button(action: {}) {
-                        Image(systemName: "gearshape.fill")
-                    }
-                    .softButtonStyle(Circle(), mainColor: Color("backgroundpost"), textColor: Color("description"), darkShadowColor: Color("SurfaceBackground"), lightShadowColor:Color("SurfaceBackground"))
-                    .padding(.trailing, 30)
-                    .padding(.top)
-                }
                 HStack {
                     Button(action: { }) {
                         Text("Producer")
@@ -60,6 +47,7 @@ struct HomePage: View {
                         }
                     }
                 }
+                .searchable(text: $searchText)
                 .listStyle(PlainListStyle())
                 .background(Color("SurfaceBackground"))
                 .scrollContentBackground(.hidden)
@@ -73,8 +61,8 @@ struct HomePage: View {
     }
     
     var filteredPostsList: [Post] {
-        return Searchtext == "" ? postsList : postsList.filter { post in
-            post.title.contains(Searchtext) || post.description.contains(Searchtext)
+        return searchText == "" ? postsList : postsList.filter { post in
+            post.title.contains(searchText) || post.description.contains(searchText)
         }
     }
     
@@ -109,8 +97,8 @@ struct HomePage: View {
     }
 }
 
-struct ApiList_Previews: PreviewProvider {
+struct PruebaHomePage_Previews: PreviewProvider {
     static var previews: some View {
-        HomePage()
+        PruebaHomePage()
     }
 }

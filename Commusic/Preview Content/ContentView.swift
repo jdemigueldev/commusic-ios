@@ -8,29 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        TabView {
-            HomePage()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-            ChatPage()
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("Chat")
-                }
-            AddPostPage()
-                .tabItem {
-                    Image(systemName: "plus")
-                    Text("Add")
-                }
-            ProfilePage()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
-            
+        
+        NavigationView {
+            TabView {
+                HomePage()
+                    .tabItem {
+                        Image(systemName: "house")
+                        
+                    }.toolbarBackground((Color("backgroundpost")),for: .tabBar)
+                
+                ChatPage()
+                    .tabItem {
+                        Image(systemName: "message")
+                        
+                    }.toolbarBackground((Color("backgroundpost")),for: .tabBar)
+                AddPostPage()
+                    .tabItem {
+                        Image(systemName: "plus")
+                        
+                    }.toolbarBackground((Color("backgroundpost")),for: .tabBar)
+                ProfilePage()
+                    .tabItem {
+                        Image(systemName: "person")
+                        
+                    }.toolbarBackground((Color("backgroundpost")),for: .tabBar)
+            }
+            .accentColor(Color("titlepost"))
         }
     }
 }

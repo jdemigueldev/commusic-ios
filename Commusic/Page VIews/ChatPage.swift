@@ -9,10 +9,27 @@ import SwiftUI
 
 struct ChatPage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        
+        
+        NavigationView {
+            
+            //ViewThatFits {
+            VStack {
+                
+                HStack {
+                    SearchBarMessage()
+                        .padding(.top)
+                        .padding(.trailing, 70)
+                        .padding(.leading, 70)
+                }
+                Spacer()
+               
+            }.background(Color("SurfaceBackground"))
+            
+        }
     }
 }
-
 struct ChatPage_Previews: PreviewProvider {
     static var previews: some View {
         ChatPage()

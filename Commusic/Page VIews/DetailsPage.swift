@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailsPage: View {
     var body: some View {
-        Text("Details")
+        (Color("SurfaceBackground")).ignoresSafeArea()
     }
 }
 

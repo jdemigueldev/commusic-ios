@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A60B1B48298932F80017EDB0 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B1B47298932F80017EDB0 /* HomeManager.swift */; };
-		A60B1B4B29893E8E0017EDB0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A60B1B4A29893E8E0017EDB0 /* Alamofire */; };
 		A644E7F72987D981005FAC0C /* APIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7F62987D981005FAC0C /* APIList.swift */; };
 		A644E7F92987DFAC005FAC0C /* ChatPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7F82987DFAC005FAC0C /* ChatPage.swift */; };
 		A644E7FB2987DFEB005FAC0C /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7FA2987DFEB005FAC0C /* ProfilePage.swift */; };
@@ -17,11 +16,15 @@
 		A644E8012987F4D1005FAC0C /* PostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E8002987F4D1005FAC0C /* PostItem.swift */; };
 		A644E8032988298B005FAC0C /* DetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E8022988298B005FAC0C /* DetailsPage.swift */; };
 		A644E80929882AD9005FAC0C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E80829882AD9005FAC0C /* Post.swift */; };
+		A68BC8F02992517900A441B0 /* SearchBarMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68BC8EF2992517900A441B0 /* SearchBarMessage.swift */; };
+		A68BC8F329926DBE00A441B0 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = A68BC8F229926DBE00A441B0 /* Neumorphic */; };
+		A68BC8FB2993C73800A441B0 /* PruebaHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68BC8FA2993C73800A441B0 /* PruebaHomePage.swift */; };
+		A6B0ECA0298DD0D0007F2BC0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B0EC9F298DD0D0007F2BC0 /* LoginView.swift */; };
 		A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */; };
 		A6F7B541297FE76000AEFE81 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B540297FE76000AEFE81 /* HomePage.swift */; };
 		A6F7B543297FE76200AEFE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7B542297FE76200AEFE81 /* Assets.xcassets */; };
 		A6F7B546297FE76200AEFE81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7B545297FE76200AEFE81 /* Preview Assets.xcassets */; };
-		A6F7B54D297FEC5500AEFE81 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B54C297FEC5500AEFE81 /* SearchBar.swift */; };
+		A6F7B54D297FEC5500AEFE81 /* SearchBarPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B54C297FEC5500AEFE81 /* SearchBarPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +37,15 @@
 		A644E8002987F4D1005FAC0C /* PostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItem.swift; sourceTree = "<group>"; };
 		A644E8022988298B005FAC0C /* DetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPage.swift; sourceTree = "<group>"; };
 		A644E80829882AD9005FAC0C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A68BC8EF2992517900A441B0 /* SearchBarMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarMessage.swift; sourceTree = "<group>"; };
+		A68BC8FA2993C73800A441B0 /* PruebaHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaHomePage.swift; sourceTree = "<group>"; };
+		A6B0EC9F298DD0D0007F2BC0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A6F7B53B297FE76000AEFE81 /* Commusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommusicApp.swift; sourceTree = "<group>"; };
 		A6F7B540297FE76000AEFE81 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		A6F7B542297FE76200AEFE81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6F7B545297FE76200AEFE81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A6F7B54C297FEC5500AEFE81 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		A6F7B54C297FEC5500AEFE81 /* SearchBarPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60B1B4B29893E8E0017EDB0 /* Alamofire in Frameworks */,
+				A68BC8F329926DBE00A441B0 /* Neumorphic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,11 +73,13 @@
 		A6F4FBAF2981D01D00CBB72F /* Page VIews */ = {
 			isa = PBXGroup;
 			children = (
+				A68BC8FA2993C73800A441B0 /* PruebaHomePage.swift */,
 				A6F7B540297FE76000AEFE81 /* HomePage.swift */,
 				A644E7F82987DFAC005FAC0C /* ChatPage.swift */,
 				A644E7FA2987DFEB005FAC0C /* ProfilePage.swift */,
 				A644E7FC2987E018005FAC0C /* AddPostPage.swift */,
 				A644E8022988298B005FAC0C /* DetailsPage.swift */,
+				A6B0EC9F298DD0D0007F2BC0 /* LoginView.swift */,
 			);
 			path = "Page VIews";
 			sourceTree = "<group>";
@@ -79,7 +87,8 @@
 		A6F4FBB02981D02B00CBB72F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A6F7B54C297FEC5500AEFE81 /* SearchBar.swift */,
+				A6F7B54C297FEC5500AEFE81 /* SearchBarPost.swift */,
+				A68BC8EF2992517900A441B0 /* SearchBarMessage.swift */,
 				A644E8002987F4D1005FAC0C /* PostItem.swift */,
 			);
 			path = Views;
@@ -140,7 +149,7 @@
 			);
 			name = Commusic;
 			packageProductDependencies = (
-				A60B1B4A29893E8E0017EDB0 /* Alamofire */,
+				A68BC8F229926DBE00A441B0 /* Neumorphic */,
 			);
 			productName = Commusic;
 			productReference = A6F7B53B297FE76000AEFE81 /* Commusic.app */;
@@ -171,7 +180,7 @@
 			);
 			mainGroup = A6F7B532297FE76000AEFE81;
 			packageReferences = (
-				A60B1B4929893E8E0017EDB0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A68BC8F129926DBE00A441B0 /* XCRemoteSwiftPackageReference "neumorphic" */,
 			);
 			productRefGroup = A6F7B53C297FE76000AEFE81 /* Products */;
 			projectDirPath = "";
@@ -202,15 +211,18 @@
 				A644E8012987F4D1005FAC0C /* PostItem.swift in Sources */,
 				A644E80929882AD9005FAC0C /* Post.swift in Sources */,
 				A644E7FB2987DFEB005FAC0C /* ProfilePage.swift in Sources */,
+				A68BC8FB2993C73800A441B0 /* PruebaHomePage.swift in Sources */,
 				A6F7B541297FE76000AEFE81 /* HomePage.swift in Sources */,
 				A60B1B48298932F80017EDB0 /* HomeManager.swift in Sources */,
+				A68BC8F02992517900A441B0 /* SearchBarMessage.swift in Sources */,
 				A644E7FF2987E2E7005FAC0C /* ContentView.swift in Sources */,
 				A644E7F72987D981005FAC0C /* APIList.swift in Sources */,
 				A644E8032988298B005FAC0C /* DetailsPage.swift in Sources */,
 				A644E7F92987DFAC005FAC0C /* ChatPage.swift in Sources */,
 				A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */,
+				A6B0ECA0298DD0D0007F2BC0 /* LoginView.swift in Sources */,
 				A644E7FD2987E018005FAC0C /* AddPostPage.swift in Sources */,
-				A6F7B54D297FEC5500AEFE81 /* SearchBar.swift in Sources */,
+				A6F7B54D297FEC5500AEFE81 /* SearchBarPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Commusic/Preview Content\"";
+				DEVELOPMENT_TEAM = P2J5L9D2KF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -368,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Commusic/Preview Content\"";
+				DEVELOPMENT_TEAM = P2J5L9D2KF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -413,21 +427,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A60B1B4929893E8E0017EDB0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		A68BC8F129926DBE00A441B0 /* XCRemoteSwiftPackageReference "neumorphic" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			repositoryURL = "https://github.com/costachung/neumorphic/";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 2.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A60B1B4A29893E8E0017EDB0 /* Alamofire */ = {
+		A68BC8F229926DBE00A441B0 /* Neumorphic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A60B1B4929893E8E0017EDB0 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = A68BC8F129926DBE00A441B0 /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
