@@ -1,14 +1,20 @@
 
-
 import Foundation
 
-struct Post: Decodable{
-    var id: Int
-    var user_id: Int
-    var title: String
-    var description: String
-    var price: Int
-    var upload_date: String?
-    //var image: String
-    //var date: Date
+public struct Post: Decodable, Identifiable {
+    public let id: Int
+    let user_id: Int
+    let title: String
+    let description: String
+    let price: Int
+    let upload_date: String
+    let photo: Photo
+    let user: User
+    
+}
+
+public struct Photo: Decodable, Identifiable {
+    public let id: Int
+    let content: String
+    let order: Int
 }

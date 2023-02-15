@@ -1,9 +1,3 @@
-//
-//  AddPost.swift
-//  Commusic
-//
-//  Created by Bluyin  on 30/1/23.
-//
 
 import SwiftUI
 

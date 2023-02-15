@@ -1,19 +1,13 @@
-//
-//  LoginView.swift
-//  Commusic
-//
-//  Created by Bluyin  on 4/2/23.
-//
 
 import SwiftUI
 
 struct LoginView: View {
-   
+    
     @State var textFieldEmail: String = ""
     @State var textFieldPassword: String = ""
     var body: some View {
         
-        VStack{
+        VStack {
             Group{
                 Text("Commusic")
                     .bold()
@@ -29,14 +23,14 @@ struct LoginView: View {
                     .keyboardType(.emailAddress)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
-                   
-                    
+                
+                
                 SecureField("Añade tu contraseña", text: $textFieldPassword)
                     .foregroundColor(Color("description"))
                     .keyboardType(.emailAddress)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
-                                        
+                
                 Button("Aceptar"){
                     
                 }
@@ -45,7 +39,6 @@ struct LoginView: View {
                 .tint(.blue)
                 
             }
-            
             .textFieldStyle(.roundedBorder)
             .padding(.horizontal, 64)
             
@@ -63,9 +56,7 @@ struct LoginView: View {
             }
             
         }
-        
-        
-        .background(Color("SurfaceBackground"))
+        //.background(Color("SurfaceBackground"))
     }
 }
 
