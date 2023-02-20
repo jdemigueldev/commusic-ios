@@ -12,7 +12,7 @@ struct ContentView: View {
                         
                     }.toolbarBackground((Color("backgroundpost")),for: .tabBar)
                 
-                ChatPage()
+                ChatListView()
                     .tabItem {
                         Image(systemName: "message")
                         
