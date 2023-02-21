@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AddPostPage: View {
     var body: some View {
-        (Color("SurfaceBackground")).ignoresSafeArea()
+        Text("")
     }
 }
 

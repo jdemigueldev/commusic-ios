@@ -58,11 +58,8 @@ struct LoginPage: View {
                             Text("Register")
                                 .foregroundColor(.blue)
                                 .underline()
-                                .padding(.top, 150)
                             Spacer()
-                        }.padding()
-                            
-                            .cornerRadius(5)
+                        }.cornerRadius(5)
                     }
                 }
             }.padding()

@@ -7,16 +7,11 @@ struct Profile: View {
     var body: some View {
         VStack {
             HStack (spacing: 15){
-                Button(action: {
-                    
-                }) {
-                    Image(systemName: "chevron.left")
-                        .font(.system(size: 22))
-                        .foregroundColor(.black)
-                }
+                
                 Text("Profile")
                     .font(.title)
                     .foregroundColor(Color("description"))
+                    .padding(.leading,10)
                 Spacer(minLength: 0)
                 
                 Button(action: {
@@ -35,18 +30,14 @@ struct Profile: View {
             
             HStack {
                 VStack(spacing: 0) {
-                    Rectangle()
-                    
-                        .fill(Color("description"))
-                        .padding(.leading, 25)
-                        .frame(width: 100, height: 3)
+                   
                     
                     Image("profile")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .padding(.top, 6)
                         .padding(.bottom, 4)
-                        .padding(.leading, 25)
+                        .padding(.leading, 10)
                         .padding(.horizontal, 8)
                     
                     //.background(Color("description"))
@@ -123,6 +114,7 @@ struct Profile: View {
                     .foregroundColor(Color("description"))
                 VStack {
                     Text(user.email)
+                        .padding(.leading)
                     
                 }.padding(.trailing, 170)
                     .font(.body)
@@ -137,7 +129,7 @@ struct Profile: View {
             Spacer(minLength: 0)
             
         }
-        .background(Color("SurfaceBackground").edgesIgnoringSafeArea(.all))
+        //.background(Color("SurfaceBackground").edgesIgnoringSafeArea(.all))
         
     }
 }

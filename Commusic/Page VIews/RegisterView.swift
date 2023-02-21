@@ -15,6 +15,13 @@ struct RegisterView: View {
     
     var body: some View {
         VStack (spacing: 20){
+            Image("register")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(.top, 50)
+            Text("Register ")
+                .bold()
+                .font(.title)
             Text("Register")
             
             TextField("Username", text: $username)
@@ -29,9 +36,15 @@ struct RegisterView: View {
                 .padding()
                 .background(Color(.systemGray6))
                 .cornerRadius(5)
+            Button {
+                ()
+            } label: {
+                Text("Submit")
+            }
         }
         .padding(.trailing, 30)
         .padding(.leading, 30)
+        .padding(.bottom, 30)
     }
 }
 

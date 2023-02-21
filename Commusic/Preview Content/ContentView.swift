@@ -11,6 +11,8 @@ struct ContentView: View {
                         Image(systemName: "house")
                         
                     }.toolbarBackground((Color("backgroundpost")),for: .tabBar)
+                    
+                                 
                 
                 ChatListView()
                     .tabItem {
@@ -28,11 +30,11 @@ struct ContentView: View {
                         Image(systemName: "person")
                         
                     }.toolbarBackground((Color("backgroundpost")),for: .tabBar)
+                }
             }
-            .accentColor(Color.white)
+            .accentColor(Color.blue)
         }
     }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

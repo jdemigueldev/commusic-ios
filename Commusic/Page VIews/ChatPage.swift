@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ChatListView: View {
     
-    var chats = ["Chat 1", "Chat 2", "Chat 3", "Chat 4", "Chat 5"]
+    var chats = ["Manoli", "Beckam", "Jazinto", "Richat", "Hitler","Figo","Marcelo","Cr7"]
     
     @State private var searchText = ""
     
@@ -21,14 +21,13 @@ struct ChatListView: View {
                     ChatRow(chatName: chat)
                 }
             }
-            .padding()
             .listStyle(PlainListStyle())
             .searchable(text: $searchText) {
             }
         }
     }
 }
-    
+
 struct ChatRow: View {
     
     var chatName: String
