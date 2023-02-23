@@ -16,9 +16,10 @@
 		A644E7FD2987E018005FAC0C /* AddPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7FC2987E018005FAC0C /* AddPostPage.swift */; };
 		A644E7FF2987E2E7005FAC0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7FE2987E2E7005FAC0C /* ContentView.swift */; };
 		A644E80929882AD9005FAC0C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E80829882AD9005FAC0C /* Post.swift */; };
+		A64DBE9A29A75D8F00AA3461 /* CategoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64DBE9929A75D8F00AA3461 /* CategoryPage.swift */; };
 		A68BC8F329926DBE00A441B0 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = A68BC8F229926DBE00A441B0 /* Neumorphic */; };
 		A6A02736299A4419005C3994 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A02735299A4419005C3994 /* User.swift */; };
-		A6DB743F29A4C2DA0013B379 /* pruebatab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DB743E29A4C2DA0013B379 /* pruebatab.swift */; };
+		A6AB605C29A63C9F004C79EC /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AB605B29A63C9F004C79EC /* SplashScreen.swift */; };
 		A6EF031D299CF3890088CDD5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EF031C299CF3890088CDD5 /* RegisterView.swift */; };
 		A6EF031F299CF96B0088CDD5 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EF031E299CF96B0088CDD5 /* LoginPage.swift */; };
 		A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */; };
@@ -36,8 +37,9 @@
 		A644E7FC2987E018005FAC0C /* AddPostPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPage.swift; sourceTree = "<group>"; };
 		A644E7FE2987E2E7005FAC0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A644E80829882AD9005FAC0C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A64DBE9929A75D8F00AA3461 /* CategoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPage.swift; sourceTree = "<group>"; };
 		A6A02735299A4419005C3994 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A6DB743E29A4C2DA0013B379 /* pruebatab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebatab.swift; sourceTree = "<group>"; };
+		A6AB605B29A63C9F004C79EC /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		A6EF031C299CF3890088CDD5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		A6EF031E299CF96B0088CDD5 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		A6F7B53B297FE76000AEFE81 /* Commusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +66,6 @@
 				A644E80829882AD9005FAC0C /* Post.swift */,
 				A6A02735299A4419005C3994 /* User.swift */,
 				A636DA4329965B9E00FE75F5 /* ApiData.swift */,
-				A6DB743E29A4C2DA0013B379 /* pruebatab.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -77,6 +78,7 @@
 				A644E7FA2987DFEB005FAC0C /* ProfilePage.swift */,
 				A644E7F82987DFAC005FAC0C /* ChatPage.swift */,
 				A644E7FC2987E018005FAC0C /* AddPostPage.swift */,
+				A64DBE9929A75D8F00AA3461 /* CategoryPage.swift */,
 				A6EF031C299CF3890088CDD5 /* RegisterView.swift */,
 				A6EF031E299CF96B0088CDD5 /* LoginPage.swift */,
 			);
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				A636DA4929966EAD00FE75F5 /* PostCell.swift */,
+				A6AB605B29A63C9F004C79EC /* SplashScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,13 +210,14 @@
 			files = (
 				A636DA4A29966EAD00FE75F5 /* PostCell.swift in Sources */,
 				A636DA42299656FE00FE75F5 /* PostListView.swift in Sources */,
+				A6AB605C29A63C9F004C79EC /* SplashScreen.swift in Sources */,
 				A6EF031D299CF3890088CDD5 /* RegisterView.swift in Sources */,
 				A636DA4429965B9E00FE75F5 /* ApiData.swift in Sources */,
-				A6DB743F29A4C2DA0013B379 /* pruebatab.swift in Sources */,
 				A6EF031F299CF96B0088CDD5 /* LoginPage.swift in Sources */,
 				A644E80929882AD9005FAC0C /* Post.swift in Sources */,
 				A636DA48299664B100FE75F5 /* PostDetail.swift in Sources */,
 				A644E7FB2987DFEB005FAC0C /* ProfilePage.swift in Sources */,
+				A64DBE9A29A75D8F00AA3461 /* CategoryPage.swift in Sources */,
 				A644E7FF2987E2E7005FAC0C /* ContentView.swift in Sources */,
 				A644E7F92987DFAC005FAC0C /* ChatPage.swift in Sources */,
 				A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */,

@@ -19,10 +19,13 @@ struct RegisterView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.top, 50)
+                .frame(width: 300, height: 250)
+            
             Text("Register ")
                 .bold()
                 .font(.title)
-            Text("Register")
+                .padding()
+           
             
             TextField("Username", text: $username)
                 .padding()

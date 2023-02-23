@@ -21,7 +21,7 @@ struct Profile: View {
                         .foregroundColor(.white)
                         .padding(.vertical, 10)
                         .padding(.horizontal, 25)
-                        .background(Color("backgroundpost"))
+                        .background(Color("description"))
                         .cornerRadius(10)
                 }
                 
@@ -70,7 +70,7 @@ struct Profile: View {
                         .foregroundColor(self.index == 0 ? Color.white: .gray)
                         .padding(.vertical, 10)
                         .padding(.horizontal)
-                        .background(self.index == 0 ? Color("backgroundpost") : Color.clear)
+                        .background(self.index == 0 ? Color("description") : Color.clear)
                         .cornerRadius(10)
                 }
                 Spacer(minLength: 0)
@@ -81,7 +81,7 @@ struct Profile: View {
                         .foregroundColor(self.index == 1 ? Color.white: .gray)
                         .padding(.vertical, 10)
                         .padding(.horizontal)
-                        .background(self.index == 1 ? Color("backgroundpost") : Color.clear)
+                        .background(self.index == 1 ? Color("description") : Color.clear)
                         .cornerRadius(10)
                 }
                 Spacer(minLength: 0)
@@ -93,7 +93,7 @@ struct Profile: View {
                         .foregroundColor(self.index == 2 ? Color.white: .gray)
                         .padding(.vertical, 10)
                         .padding(.horizontal)
-                        .background(self.index == 2 ? Color("backgroundpost") : Color.clear)
+                        .background(self.index == 2 ? Color("description") : Color.clear)
                         .cornerRadius(10)
                 }
                 
