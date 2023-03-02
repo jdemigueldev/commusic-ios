@@ -66,6 +66,7 @@ struct AddPostPage: View {
                     Text("Submit")
                 }
             }
+            .padding()
             Spacer()
         }
         .padding(.top)

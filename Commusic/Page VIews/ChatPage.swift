@@ -52,8 +52,12 @@ struct ChatDetailView: View {
     var chatName: String
     
     var body: some View {
-        Text("Detalle del chat \(chatName)")
-            .navigationBarTitle(chatName)
+        VStack {
+            HStack {
+                Text("Detalle del chat \(chatName)")
+                    .navigationBarTitle(chatName)
+            }
+        }
     }
 }
 

@@ -38,11 +38,7 @@ struct PostDetail: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
         
-            Text(post.upload_date)
-                .padding(.top, 6)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .lineLimit(1)
+            Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
             
             Text(post.title)
                 .font(.title2)
@@ -73,6 +69,6 @@ struct PostDetail: View {
 
 struct PostDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PostDetail(post: Post(id: 1, user_id: 1, title: "Hangeo", description: "Este es mi estudio, una pasada, busco chicos calientes que quieran grabar canciones de amor", price: 2, upload_date: "4/3/3", photo: Photo(id: 1, content: "https://images.unsplash.com/photo-1598653222000-6b7b7a552625", order: 1), user: User(username: "juanito", email: "bluyin@example.com", full_name: "Bluyin Dev", profile_picture: "" )))
+        PostDetail(post: Post(id: 1, user_id: 1, title: "Hangeo", description: "Este es mi estudio, una pasada, busco chicos calientes que quieran grabar canciones de amor", price: 2, upload_date: "1/2", photo: Photo(id: 1, content: "https://images.unsplash.com/photo-1598653222000-6b7b7a552625", order: 1), user: User(username: "juanito", email: "bluyin@example.com", full_name: "Bluyin Dev", profile_picture: "" )))
     }
 }

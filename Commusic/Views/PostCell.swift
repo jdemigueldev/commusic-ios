@@ -49,7 +49,7 @@ struct PostCell: View {
                             .lineLimit(3)
                             .minimumScaleFactor(0.5)
                         
-                        Text(post.upload_date)
+                        Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
                             .padding(.top, 6)
                             .font(.subheadline)
                             .foregroundColor(.secondary)

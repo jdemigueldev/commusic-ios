@@ -16,6 +16,12 @@
 		A644E7FD2987E018005FAC0C /* AddPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7FC2987E018005FAC0C /* AddPostPage.swift */; };
 		A644E7FF2987E2E7005FAC0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E7FE2987E2E7005FAC0C /* ContentView.swift */; };
 		A644E80929882AD9005FAC0C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644E80829882AD9005FAC0C /* Post.swift */; };
+		A645460229B0A27A00C06D46 /* TitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460129B0A27A00C06D46 /* TitleRow.swift */; };
+		A645460429B0A52300C06D46 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460329B0A52200C06D46 /* ChatView.swift */; };
+		A645460629B0A56500C06D46 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460529B0A56500C06D46 /* Message.swift */; };
+		A645460829B0A5F900C06D46 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460729B0A5F900C06D46 /* MessageBubble.swift */; };
+		A645460A29B0B2D600C06D46 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460929B0B2D600C06D46 /* Extensions.swift */; };
+		A645460C29B0B8E200C06D46 /* MessageField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460B29B0B8E200C06D46 /* MessageField.swift */; };
 		A64DBE9A29A75D8F00AA3461 /* CategoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64DBE9929A75D8F00AA3461 /* CategoryPage.swift */; };
 		A68BC8F329926DBE00A441B0 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = A68BC8F229926DBE00A441B0 /* Neumorphic */; };
 		A6A02736299A4419005C3994 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A02735299A4419005C3994 /* User.swift */; };
@@ -37,6 +43,12 @@
 		A644E7FC2987E018005FAC0C /* AddPostPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPage.swift; sourceTree = "<group>"; };
 		A644E7FE2987E2E7005FAC0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A644E80829882AD9005FAC0C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A645460129B0A27A00C06D46 /* TitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRow.swift; sourceTree = "<group>"; };
+		A645460329B0A52200C06D46 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		A645460529B0A56500C06D46 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A645460729B0A5F900C06D46 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		A645460929B0B2D600C06D46 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A645460B29B0B8E200C06D46 /* MessageField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageField.swift; sourceTree = "<group>"; };
 		A64DBE9929A75D8F00AA3461 /* CategoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPage.swift; sourceTree = "<group>"; };
 		A6A02735299A4419005C3994 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A6AB605B29A63C9F004C79EC /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -60,12 +72,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A645460029B0A25700C06D46 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A645460129B0A27A00C06D46 /* TitleRow.swift */,
+				A645460329B0A52200C06D46 /* ChatView.swift */,
+				A645460729B0A5F900C06D46 /* MessageBubble.swift */,
+				A645460B29B0B8E200C06D46 /* MessageField.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		A6F4FBAE2981D01100CBB72F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A644E80829882AD9005FAC0C /* Post.swift */,
 				A6A02735299A4419005C3994 /* User.swift */,
 				A636DA4329965B9E00FE75F5 /* ApiData.swift */,
+				A645460529B0A56500C06D46 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,11 +138,13 @@
 			isa = PBXGroup;
 			children = (
 				A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */,
+				A645460029B0A25700C06D46 /* Components */,
 				A6F4FBAE2981D01100CBB72F /* Model */,
 				A6F4FBB02981D02B00CBB72F /* Views */,
 				A6F4FBAF2981D01D00CBB72F /* Page VIews */,
 				A6F7B542297FE76200AEFE81 /* Assets.xcassets */,
 				A6F7B544297FE76200AEFE81 /* Preview Content */,
+				A645460929B0B2D600C06D46 /* Extensions.swift */,
 			);
 			path = Commusic;
 			sourceTree = "<group>";
@@ -211,14 +237,20 @@
 				A636DA4A29966EAD00FE75F5 /* PostCell.swift in Sources */,
 				A636DA42299656FE00FE75F5 /* PostListView.swift in Sources */,
 				A6AB605C29A63C9F004C79EC /* SplashScreen.swift in Sources */,
+				A645460629B0A56500C06D46 /* Message.swift in Sources */,
+				A645460229B0A27A00C06D46 /* TitleRow.swift in Sources */,
 				A6EF031D299CF3890088CDD5 /* RegisterView.swift in Sources */,
 				A636DA4429965B9E00FE75F5 /* ApiData.swift in Sources */,
 				A6EF031F299CF96B0088CDD5 /* LoginPage.swift in Sources */,
 				A644E80929882AD9005FAC0C /* Post.swift in Sources */,
 				A636DA48299664B100FE75F5 /* PostDetail.swift in Sources */,
+				A645460C29B0B8E200C06D46 /* MessageField.swift in Sources */,
 				A644E7FB2987DFEB005FAC0C /* ProfilePage.swift in Sources */,
 				A64DBE9A29A75D8F00AA3461 /* CategoryPage.swift in Sources */,
+				A645460829B0A5F900C06D46 /* MessageBubble.swift in Sources */,
 				A644E7FF2987E2E7005FAC0C /* ContentView.swift in Sources */,
+				A645460429B0A52300C06D46 /* ChatView.swift in Sources */,
+				A645460A29B0B2D600C06D46 /* Extensions.swift in Sources */,
 				A644E7F92987DFAC005FAC0C /* ChatPage.swift in Sources */,
 				A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */,
 				A644E7FD2987E018005FAC0C /* AddPostPage.swift in Sources */,
