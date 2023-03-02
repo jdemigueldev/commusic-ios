@@ -22,6 +22,10 @@
 		A645460829B0A5F900C06D46 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460729B0A5F900C06D46 /* MessageBubble.swift */; };
 		A645460A29B0B2D600C06D46 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460929B0B2D600C06D46 /* Extensions.swift */; };
 		A645460C29B0B8E200C06D46 /* MessageField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645460B29B0B8E200C06D46 /* MessageField.swift */; };
+		A645460E29B0FF8100C06D46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A645460D29B0FF8100C06D46 /* GoogleService-Info.plist */; };
+		A645461129B1027A00C06D46 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A645461029B1027A00C06D46 /* FirebaseFirestore */; };
+		A645461329B1027A00C06D46 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A645461229B1027A00C06D46 /* FirebaseFirestoreSwift */; };
+		A645461529B10AA800C06D46 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645461429B10AA800C06D46 /* MessagesManager.swift */; };
 		A64DBE9A29A75D8F00AA3461 /* CategoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64DBE9929A75D8F00AA3461 /* CategoryPage.swift */; };
 		A68BC8F329926DBE00A441B0 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = A68BC8F229926DBE00A441B0 /* Neumorphic */; };
 		A6A02736299A4419005C3994 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A02735299A4419005C3994 /* User.swift */; };
@@ -49,6 +53,8 @@
 		A645460729B0A5F900C06D46 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
 		A645460929B0B2D600C06D46 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A645460B29B0B8E200C06D46 /* MessageField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageField.swift; sourceTree = "<group>"; };
+		A645460D29B0FF8100C06D46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A645461429B10AA800C06D46 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		A64DBE9929A75D8F00AA3461 /* CategoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPage.swift; sourceTree = "<group>"; };
 		A6A02735299A4419005C3994 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A6AB605B29A63C9F004C79EC /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A68BC8F329926DBE00A441B0 /* Neumorphic in Frameworks */,
+				A645461129B1027A00C06D46 /* FirebaseFirestore in Frameworks */,
+				A645461329B1027A00C06D46 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				A645460129B0A27A00C06D46 /* TitleRow.swift */,
-				A645460329B0A52200C06D46 /* ChatView.swift */,
 				A645460729B0A5F900C06D46 /* MessageBubble.swift */,
 				A645460B29B0B8E200C06D46 /* MessageField.swift */,
 			);
@@ -138,13 +145,16 @@
 			isa = PBXGroup;
 			children = (
 				A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */,
+				A645460929B0B2D600C06D46 /* Extensions.swift */,
+				A645460329B0A52200C06D46 /* ChatView.swift */,
+				A645461429B10AA800C06D46 /* MessagesManager.swift */,
 				A645460029B0A25700C06D46 /* Components */,
 				A6F4FBAE2981D01100CBB72F /* Model */,
 				A6F4FBB02981D02B00CBB72F /* Views */,
 				A6F4FBAF2981D01D00CBB72F /* Page VIews */,
 				A6F7B542297FE76200AEFE81 /* Assets.xcassets */,
 				A6F7B544297FE76200AEFE81 /* Preview Content */,
-				A645460929B0B2D600C06D46 /* Extensions.swift */,
+				A645460D29B0FF8100C06D46 /* GoogleService-Info.plist */,
 			);
 			path = Commusic;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 			name = Commusic;
 			packageProductDependencies = (
 				A68BC8F229926DBE00A441B0 /* Neumorphic */,
+				A645461029B1027A00C06D46 /* FirebaseFirestore */,
+				A645461229B1027A00C06D46 /* FirebaseFirestoreSwift */,
 			);
 			productName = Commusic;
 			productReference = A6F7B53B297FE76000AEFE81 /* Commusic.app */;
@@ -207,6 +219,7 @@
 			mainGroup = A6F7B532297FE76000AEFE81;
 			packageReferences = (
 				A68BC8F129926DBE00A441B0 /* XCRemoteSwiftPackageReference "neumorphic" */,
+				A645460F29B1027A00C06D46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = A6F7B53C297FE76000AEFE81 /* Products */;
 			projectDirPath = "";
@@ -224,6 +237,7 @@
 			files = (
 				A6F7B546297FE76200AEFE81 /* Preview Assets.xcassets in Resources */,
 				A6F7B543297FE76200AEFE81 /* Assets.xcassets in Resources */,
+				A645460E29B0FF8100C06D46 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +267,7 @@
 				A645460A29B0B2D600C06D46 /* Extensions.swift in Sources */,
 				A644E7F92987DFAC005FAC0C /* ChatPage.swift in Sources */,
 				A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */,
+				A645461529B10AA800C06D46 /* MessagesManager.swift in Sources */,
 				A644E7FD2987E018005FAC0C /* AddPostPage.swift in Sources */,
 				A6A02736299A4419005C3994 /* User.swift in Sources */,
 			);
@@ -459,6 +474,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A645460F29B1027A00C06D46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		A68BC8F129926DBE00A441B0 /* XCRemoteSwiftPackageReference "neumorphic" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/costachung/neumorphic/";
@@ -470,6 +493,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A645461029B1027A00C06D46 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A645460F29B1027A00C06D46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A645461229B1027A00C06D46 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A645460F29B1027A00C06D46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		A68BC8F229926DBE00A441B0 /* Neumorphic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A68BC8F129926DBE00A441B0 /* XCRemoteSwiftPackageReference "neumorphic" */;
