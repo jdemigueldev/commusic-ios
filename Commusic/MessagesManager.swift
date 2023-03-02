@@ -32,6 +32,8 @@ class MessagesManager: ObservableObject {
                     return nil
                 }
             }
+            
+            self.messages.sort{ $0.timestamp < $1.timestamp }
         }
     }
 }

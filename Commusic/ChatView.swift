@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ChatView: View {
     @StateObject var messagesManager = MessagesManager()
-    var messageArray = ["Hello you", "How are you doing ?", "Ibe been building apps in swiftUI from scratch and its so funn"]
-    
+
     var body: some View {
         VStack {
             VStack {

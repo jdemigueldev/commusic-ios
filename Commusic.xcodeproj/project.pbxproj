@@ -146,15 +146,15 @@
 			children = (
 				A6F7B53E297FE76000AEFE81 /* CommusicApp.swift */,
 				A645460929B0B2D600C06D46 /* Extensions.swift */,
-				A645460329B0A52200C06D46 /* ChatView.swift */,
 				A645461429B10AA800C06D46 /* MessagesManager.swift */,
+				A645460329B0A52200C06D46 /* ChatView.swift */,
 				A645460029B0A25700C06D46 /* Components */,
 				A6F4FBAE2981D01100CBB72F /* Model */,
 				A6F4FBB02981D02B00CBB72F /* Views */,
 				A6F4FBAF2981D01D00CBB72F /* Page VIews */,
-				A6F7B542297FE76200AEFE81 /* Assets.xcassets */,
 				A6F7B544297FE76200AEFE81 /* Preview Content */,
 				A645460D29B0FF8100C06D46 /* GoogleService-Info.plist */,
+				A6F7B542297FE76200AEFE81 /* Assets.xcassets */,
 			);
 			path = Commusic;
 			sourceTree = "<group>";
