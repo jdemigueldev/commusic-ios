@@ -19,7 +19,7 @@ struct ContentView: View {
                         Image(systemName: "message")
                         
                     }.toolbarBackground((Color.white),for: .tabBar)
-                CategoryPage()
+                CategoryPage(categories: Category.sampleData)
                     .tabItem {
                         Image(systemName: "plus")
                         

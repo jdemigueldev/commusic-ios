@@ -17,7 +17,7 @@ struct ChatListView: View {
     var body: some View {
         NavigationView {
             List(filteredChats, id: \.self) { chat in
-                NavigationLink(destination: ChatDetailView(chatName: chat)) {
+                NavigationLink(destination: ChatView()) {
                     ChatRow(chatName: chat)
                 }
             }

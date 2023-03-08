@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CategoryPage: View {
+    let categories: [Category]
+    
     var body: some View {
-        
         NavigationView {
             VStack {
                 Text("Selecciona una categoria")
@@ -20,40 +21,12 @@ struct CategoryPage: View {
                 Spacer()
                 
                 List {
-                    NavigationLink(destination: AddPostPage()) {
-                        HStack {
-                            Image(systemName: "music.mic")
-                            Text("Singer")
-                        }
-                    }
-                    NavigationLink(destination: AddPostPage()) {
-                        HStack {
-                            Image(systemName: "music.note.tv")
-                            Text("Producer")
-                        }
-                    }
-                    NavigationLink(destination: AddPostPage()) {
-                        HStack {
-                            Image(systemName: "music.quarternote.3")
-                            Text("Beatmaker")
-                        }
-                    }
-                    NavigationLink(destination: AddPostPage()) {
-                        HStack {
-                            Image(systemName: "music.note.house")
-                            Text("Mixing")
-                        }
-                    }
-                    NavigationLink(destination: AddPostPage()) {
-                        HStack {
-                            Image(systemName: "mic")
-                            Text("Trap")
-                        }
-                    }
-                    NavigationLink(destination: AddPostPage()) {
-                        HStack {
-                            Image(systemName: "arrow.right.to.line.compact")
-                            Text("Otros")
+                    ForEach(categories) { category in
+                        NavigationLink(destination: AddPostPage(category: category)) {
+                            HStack {
+                                Image(systemName: category.systemImage)
+                                Text(category.name)
+                            }
                         }
                     }
                 }
@@ -66,6 +39,6 @@ struct CategoryPage: View {
 
 struct CategoryPage_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryPage()
+        CategoryPage(categories: Category.sampleData)
     }
 }

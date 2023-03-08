@@ -48,6 +48,7 @@ struct PostCell: View {
                             .font(.body)
                             .lineLimit(3)
                             .minimumScaleFactor(0.5)
+                            .fontWeight(.medium)
                         
                         Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
                             .padding(.top, 6)

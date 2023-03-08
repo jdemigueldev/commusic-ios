@@ -2,10 +2,11 @@
 import SwiftUI
 
 struct AddPostPage: View {
+    let category: Category
     
     @State var title: String = ""
     @State var description: String = ""
-    @State var price: String = ""
+    @State var price: Int?
     
     @State private var showMenu = false
     @State private var selectedOption: String?
@@ -15,7 +16,8 @@ struct AddPostPage: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Publicando en Categoria")
+                Text("Publicando en")
+                Label(category.name, systemImage: category.systemImage)
             }
             .padding()
             .font(.title2)
@@ -51,25 +53,30 @@ struct AddPostPage: View {
                     .padding()
                     .background(Color(.systemGray6))
                     .cornerRadius(5)
-                TextField("Description", text: $description)
-                    .padding()
+                TextEditor(text: $description)
+                    .scrollContentBackground(.hidden)
                     .background(Color(.systemGray6))
+                    .frame(height: 200)
                     .cornerRadius(5)
-                TextField("Price", text: $price)
+                    
+                TextField("Price", value: $price, format: .number )
                     .padding()
                     .background(Color(.systemGray6))
                     .cornerRadius(5)
                 
                 Button {
-                    ()
+                    PostCreate(user_id: 1, title: title, description: description, price: price!)
                 } label: {
                     Text("Submit")
                 }
+                .disabled(title.isEmpty || description.isEmpty || price == nil)
             }
             .padding()
+            .buttonStyle(.bordered)
+            .tint(.blue)
             Spacer()
         }
-        .padding(.top)
+        .padding()
         .sheet(isPresented: $showImagePicker) {
             ImagePickerView(sourceType: self.sourceType)
         }
@@ -118,6 +125,6 @@ struct ImagePickerView: UIViewControllerRepresentable {
 
 struct AddPostPage_Previews: PreviewProvider {
     static var previews: some View {
-        AddPostPage()
+        AddPostPage(category: Category.sampleData[0])
     }
 }
