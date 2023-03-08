@@ -15,39 +15,62 @@ struct AddPostPage: View {
     
     var body: some View {
         VStack {
+        
             HStack {
-                Text("Publicando en")
+                Text("Publicando en :")
                 Label(category.name, systemImage: category.systemImage)
+                
+                
             }
             .padding()
             .font(.title2)
             .fontWeight(.semibold)
             .navigationBarTitleDisplayMode(.inline)
             
+            Rectangle()
+                    .frame(height: 1)
+                    .padding(.leading, 20)
+                    .padding(.trailing, 20)
+                    .foregroundColor(.gray)
+                    .padding(.bottom, 60)
+            
+            
+
+         
             HStack {
-                Button(action: {
-                    self.showMenu.toggle()
-                }) {
-                    Image(systemName: "camera")
-                        .font(.system(size: 24))
-                }
-                .padding()
-                .actionSheet(isPresented: $showMenu) {
-                    ActionSheet(title: Text("Selecciona una opción"), message: Text("Elige una opción de la lista"), buttons: [
-                        .default(Text("Hacer una foto")) {
-                            self.selectedOption = "Hacer una foto"
-                            self.showImagePicker = true
-                            self.sourceType = .camera
-                        },
-                        .default(Text("Seleccionar de la galería")) {
-                            self.selectedOption = "Seleccionar de la galería"
-                            self.showImagePicker = true
-                            self.sourceType = .photoLibrary
-                        },
-                        .cancel()
-                    ])
+                ForEach(0..<5) { _ in
+                    ZStack {
+                        Image(systemName: "camera")
+                            .font(.system(size: 24))
+                            .padding(10)
+                            //.background(Color.white)
+                            .clipShape(Circle())
+                            .onTapGesture {
+                                self.showMenu.toggle()
+                            }
+                        Circle()
+                            .stroke(Color.gray, lineWidth: 2)
+                            .frame(width: 48, height: 48)
+                    }
+                    .actionSheet(isPresented: $showMenu) {
+                        ActionSheet(title: Text("Selecciona una opción"), message: Text("Elige una opción de la lista"), buttons: [
+                            .default(Text("Hacer una foto")) {
+                                self.selectedOption = "Hacer una foto"
+                                self.showImagePicker = true
+                                self.sourceType = .camera
+                            },
+                            .default(Text("Seleccionar de la galería")) {
+                                self.selectedOption = "Seleccionar de la galería"
+                                self.showImagePicker = true
+                                self.sourceType = .photoLibrary
+                            },
+                            .cancel()
+                        ])
+                    }
                 }
             }
+
+
             VStack (spacing: 15){
                 TextField("Title", text: $title)
                     .padding()
@@ -58,24 +81,36 @@ struct AddPostPage: View {
                     .background(Color(.systemGray6))
                     .frame(height: 200)
                     .cornerRadius(5)
-                    
+                
                 TextField("Price", value: $price, format: .number )
                     .padding()
                     .background(Color(.systemGray6))
                     .cornerRadius(5)
                 
                 Button {
-                    PostCreate(user_id: 1, title: title, description: description, price: price!)
+                    let post = PostCreate(user_id: 1, title: title, description: description, price: price!)
+                    Task {
+                        do {
+                            let post = PostCreate(user_id: 1, title: title, description: description, price: price!)
+                            try await createPost(post)
+                            
+                        } catch {
+                            print("Error al crear el post: \(error.localizedDescription)")
+                        }
+                        
+                    }
                 } label: {
                     Text("Submit")
                 }
                 .disabled(title.isEmpty || description.isEmpty || price == nil)
+                .tint(.green)
+                
             }
             .padding()
             .buttonStyle(.bordered)
-            .tint(.blue)
             Spacer()
         }
+        .preferredColorScheme(.dark)
         .padding()
         .sheet(isPresented: $showImagePicker) {
             ImagePickerView(sourceType: self.sourceType)

@@ -18,6 +18,7 @@ struct RegisterView: View {
             Image("register")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .scaledToFit()
                 .padding(.top, 50)
                 .frame(width: 300, height: 250)
             
@@ -47,8 +48,12 @@ struct RegisterView: View {
         }
         .padding(.trailing, 30)
         .padding(.leading, 30)
-        .padding(.bottom, 30)
+        .padding(.bottom, 100)
+        .edgesIgnoringSafeArea(.all)
+        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+        .preferredColorScheme(.dark)
     }
+    
 }
 
 struct RegisterView_Previews: PreviewProvider {

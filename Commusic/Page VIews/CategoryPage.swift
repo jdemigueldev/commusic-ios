@@ -18,6 +18,12 @@ struct CategoryPage: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                 
+                Rectangle()
+                        .frame(height: 1)
+                        .padding(.leading, 70)
+                        .padding(.trailing, 70)
+                        .foregroundColor(.gray)
+                
                 Spacer()
                 
                 List {
@@ -26,12 +32,13 @@ struct CategoryPage: View {
                             HStack {
                                 Image(systemName: category.systemImage)
                                 Text(category.name)
+                                
                             }
-                        }
+                        }//.listRowBackground(Color.purple)
                     }
                 }
-                .listStyle(PlainListStyle())
-            }
+                
+            }.preferredColorScheme(.dark)
         }
 
     }

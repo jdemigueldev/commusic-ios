@@ -10,7 +10,7 @@ struct CommusicApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            LoginPage()
+            ContentView()
         }
     }
 }

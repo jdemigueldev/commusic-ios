@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 public func getPosts() async -> [Post]  {
     let url = URL(string: "https://commusic.onrender.com/posts")!
@@ -28,12 +29,22 @@ func createPost(_ post: PostCreate) async {
     let postData = try? JSONEncoder().encode(post)
     request.httpBody = postData
     
-    URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
-      if (error != nil) {
-        print(error)
-      } else {
-        let httpResponse = response as? HTTPURLResponse
-        print(httpResponse)
-      }
-    }).resume()
+    if let bodyData = request.httpBody, let bodyString = String(data: bodyData, encoding: .utf8) {
+        print("Request body: \(bodyString)")
+    }
+    
+    URLSession.shared.dataTask(with: request) { (data, response, error) in
+        if let error = error {
+            print("Error: \(error.localizedDescription)")
+        } else {
+            if let httpResponse = response as? HTTPURLResponse {
+                print("Response status code: \(httpResponse.statusCode)")
+                if let data = data, let body = String(data: data, encoding: .utf8) {
+                    print("Response body: \(body)")
+                }
+            }
+        }
+    }.resume()
 }
+
+

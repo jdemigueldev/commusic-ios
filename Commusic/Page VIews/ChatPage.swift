@@ -19,12 +19,17 @@ struct ChatListView: View {
             List(filteredChats, id: \.self) { chat in
                 NavigationLink(destination: ChatView()) {
                     ChatRow(chatName: chat)
-                }
+                    
+                }.listRowSeparatorTint(.gray)
+                    
             }
+            .padding(.trailing, 20)
+            .padding(.top, 20)
             .listStyle(PlainListStyle())
             .searchable(text: $searchText) {
             }
-        }
+        }.preferredColorScheme(.dark)
+            
     }
 }
 

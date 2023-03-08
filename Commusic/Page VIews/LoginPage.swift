@@ -13,19 +13,15 @@ struct LoginPage: View {
     @State var password: String = ""
     
     var body: some View {
-        NavigationView {
+ 
             VStack (spacing: 20){
                 Image("loginpicture")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.top, 50)
-                
                 Text("Login")
                     .bold()
                     .font(.title)
-                Text("The new era of music and people")
-                    .font(.subheadline)
-                
                 TextField("Username", text: $username)
                     .padding()
                     .background(Color(.systemGray6))
@@ -50,20 +46,25 @@ struct LoginPage: View {
                         ()
                     } label: {
                         Text("¿ Forgot password ?")
-                            .foregroundColor(.blue)
+                            .foregroundColor(.white)
+                            .underline()
                     }
                     NavigationLink(destination: RegisterView()) {
                         VStack {
                             Spacer()
                             Text("Register")
-                                .foregroundColor(.blue)
+                                .foregroundColor(.white)
                                 .underline()
                             Spacer()
                         }.cornerRadius(5)
                     }
                 }
             }.padding()
-        }
+                .edgesIgnoringSafeArea(.bottom)
+                .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+                .preferredColorScheme(.dark)
+        
+        
     }
 }
 
