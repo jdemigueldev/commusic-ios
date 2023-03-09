@@ -29,6 +29,8 @@ func createPost(_ post: PostCreate) async {
     let postData = try? JSONEncoder().encode(post)
     request.httpBody = postData
     
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    
     if let bodyData = request.httpBody, let bodyString = String(data: bodyData, encoding: .utf8) {
         print("Request body: \(bodyString)")
     }

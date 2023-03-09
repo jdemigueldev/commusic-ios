@@ -92,7 +92,6 @@ struct AddPostPage: View {
                             let post = PostCreate(user_id: 1, title: title, description: description, price: price!)
                             Task {
                                 do {
-                                    let post = PostCreate(user_id: 1, title: title, description: description, price: price!)
                                     try await createPost(post)
                                     
                                 } catch {

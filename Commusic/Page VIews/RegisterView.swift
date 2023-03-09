@@ -50,7 +50,6 @@ struct RegisterView: View {
         .padding(.leading, 30)
         .padding(.bottom, 100)
         .edgesIgnoringSafeArea(.all)
-        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
         .preferredColorScheme(.dark)
     }
     

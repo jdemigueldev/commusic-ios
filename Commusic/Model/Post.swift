@@ -8,7 +8,7 @@ public struct Post: Decodable, Identifiable {
     let description: String
     let price: Int
     let upload_date: String
-    let photo: Photo
+    let photo: Photo?
     let user: User
 }
 

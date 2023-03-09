@@ -9,9 +9,9 @@ struct PostDetail: View {
         VStack (spacing: 20){
             Spacer()
             
-            if post.photo.content != nil {
+            if post.photo?.content != nil {
                 
-                AsyncImage (url: URL(string: post.photo.content)) { phase in
+                AsyncImage (url: URL(string: post.photo!.content)) { phase in
                     if let image = phase.image {
                         image.resizable ()
                             .scaledToFill ()
