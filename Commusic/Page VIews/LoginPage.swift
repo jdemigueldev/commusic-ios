@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct LoginPage: View {
+    @Binding var isLoggedIn: Bool
     
-    @State var username: String = ""
-    @State var password: String = ""
+    @State private var isPerformingLogin = false
+    @State private var loginError = false
+    @State private var username: String = ""
+    @State private var password: String = ""
     
     var body: some View {
  
@@ -31,45 +34,50 @@ struct LoginPage: View {
                     .background(Color(.systemGray6))
                     .cornerRadius(5)
                 
-                VStack (spacing: 30){
-                    NavigationLink(destination: ContentView()) {
-                        HStack {
-                            Spacer()
-                            Text("Login")
-                                .foregroundColor(.white)
-                            Spacer()
-                        }.padding()
-                            .background(Color.blue)
-                            .cornerRadius(5)
-                    }
-                    Button {
-                        ()
-                    } label: {
-                        Text("¿ Forgot password ?")
-                            .foregroundColor(.white)
-                            .underline()
-                    }
-                    NavigationLink(destination: RegisterView()) {
-                        VStack {
-                            Spacer()
-                            Text("Register")
-                                .foregroundColor(.white)
-                                .underline()
-                            Spacer()
-                        }.cornerRadius(5)
-                    }
+                if (loginError) {
+                    Text("Invalid credentials")
+                        .foregroundColor(.red)
                 }
+                
+                Button(action: {
+                    isPerformingLogin = true
+                    
+                    Task {
+                        isLoggedIn = await logIn(login: Login(username: username, password: password))
+                        isPerformingLogin = false
+                        loginError = !isLoggedIn
+                    }
+                }, label: {
+                    if (isPerformingLogin) {
+                        ProgressView()
+                    } else {
+                        Text("Login")
+                    }
+                })
+                .disabled(isPerformingLogin)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .cornerRadius(5)
+                
+                Button("Register") {
+                    
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.white)
+                .overlay(RoundedRectangle(cornerRadius: 5)
+                    .stroke(Color.blue, lineWidth: 2))
             }.padding()
                 .edgesIgnoringSafeArea(.bottom)
                 //.background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
                 .preferredColorScheme(.dark)
-        
-        
     }
 }
 
 struct LoginPage_Previews: PreviewProvider {
     static var previews: some View {
-        LoginPage()
+        LoginPage(isLoggedIn: .constant(false))
     }
 }

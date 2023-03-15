@@ -1,4 +1,3 @@
-
 import Foundation
 
 public struct UserDetails: Decodable, Identifiable {
@@ -6,10 +5,10 @@ public struct UserDetails: Decodable, Identifiable {
     var username: String
     var email: String
     var full_name: String
-    var description: String
-    var birth_date: Date
-    var profile_picture: String
-    var register_date: Date
+    var description: String?
+    var birth_date: String?
+    var profile_picture: String?
+    var register_date: String
 }
 
 public struct User: Decodable {
