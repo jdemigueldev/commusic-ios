@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3847A86329B9DBA9002FA8D1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847A86229B9DBA9002FA8D1 /* Endpoint.swift */; };
+		38A9024B29B9EDB0004701B3 /* UserDefaultsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9024A29B9EDB0004701B3 /* UserDefaultsWorker.swift */; };
+		38A9024D29B9F2EC004701B3 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9024C29B9F2EC004701B3 /* Token.swift */; };
+		38C1056629BB29F6005D0A8A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C1056529BB29F6005D0A8A /* Login.swift */; };
 		A636DA42299656FE00FE75F5 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636DA41299656FE00FE75F5 /* PostListView.swift */; };
 		A636DA4429965B9E00FE75F5 /* ApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636DA4329965B9E00FE75F5 /* ApiData.swift */; };
 		A636DA48299664B100FE75F5 /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636DA47299664B100FE75F5 /* PostDetail.swift */; };
@@ -38,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3847A86229B9DBA9002FA8D1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		38A9024A29B9EDB0004701B3 /* UserDefaultsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWorker.swift; sourceTree = "<group>"; };
+		38A9024C29B9F2EC004701B3 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		38C1056529BB29F6005D0A8A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A636DA41299656FE00FE75F5 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		A636DA4329965B9E00FE75F5 /* ApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiData.swift; sourceTree = "<group>"; };
 		A636DA47299664B100FE75F5 /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
@@ -95,9 +103,10 @@
 			children = (
 				A644E80829882AD9005FAC0C /* Post.swift */,
 				A6A02735299A4419005C3994 /* User.swift */,
-				A636DA4329965B9E00FE75F5 /* ApiData.swift */,
 				A645460529B0A56500C06D46 /* Message.swift */,
 				A6FAA37529B880C500B082BE /* Category.swift */,
+				38A9024C29B9F2EC004701B3 /* Token.swift */,
+				38C1056529BB29F6005D0A8A /* Login.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +158,9 @@
 				A645460929B0B2D600C06D46 /* Extensions.swift */,
 				A645461429B10AA800C06D46 /* MessagesManager.swift */,
 				A645460329B0A52200C06D46 /* ChatView.swift */,
+				3847A86229B9DBA9002FA8D1 /* Endpoint.swift */,
+				38A9024A29B9EDB0004701B3 /* UserDefaultsWorker.swift */,
+				A636DA4329965B9E00FE75F5 /* ApiData.swift */,
 				A645460029B0A25700C06D46 /* Components */,
 				A6F4FBAE2981D01100CBB72F /* Model */,
 				A6F4FBB02981D02B00CBB72F /* Views */,
@@ -257,9 +269,12 @@
 				A6EF031F299CF96B0088CDD5 /* LoginPage.swift in Sources */,
 				A644E80929882AD9005FAC0C /* Post.swift in Sources */,
 				A636DA48299664B100FE75F5 /* PostDetail.swift in Sources */,
+				3847A86329B9DBA9002FA8D1 /* Endpoint.swift in Sources */,
+				38A9024B29B9EDB0004701B3 /* UserDefaultsWorker.swift in Sources */,
 				A645460C29B0B8E200C06D46 /* MessageField.swift in Sources */,
 				A644E7FB2987DFEB005FAC0C /* ProfilePage.swift in Sources */,
 				A64DBE9A29A75D8F00AA3461 /* CategoryPage.swift in Sources */,
+				38C1056629BB29F6005D0A8A /* Login.swift in Sources */,
 				A645460829B0A5F900C06D46 /* MessageBubble.swift in Sources */,
 				A6FAA37629B880C500B082BE /* Category.swift in Sources */,
 				A644E7FF2987E2E7005FAC0C /* ContentView.swift in Sources */,
@@ -268,6 +283,7 @@
 				A644E7F92987DFAC005FAC0C /* ChatPage.swift in Sources */,
 				A6F7B53F297FE76000AEFE81 /* CommusicApp.swift in Sources */,
 				A645461529B10AA800C06D46 /* MessagesManager.swift in Sources */,
+				38A9024D29B9F2EC004701B3 /* Token.swift in Sources */,
 				A644E7FD2987E018005FAC0C /* AddPostPage.swift in Sources */,
 				A6A02736299A4419005C3994 /* User.swift in Sources */,
 			);
@@ -407,6 +423,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +454,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

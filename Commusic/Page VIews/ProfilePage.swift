@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct Profile: View {
-    var user: UserDetails
+    @State private var user: UserDetails?
     @State var index = 0
     var body: some View {
         VStack {
@@ -43,10 +43,10 @@ struct Profile: View {
                     //.background(Color("description"))
                 }
                 VStack(alignment: .leading, spacing: 12) {
-                    Text(user.username)
+                    Text(user?.username ?? "")
                         .font(.title)
                         .foregroundColor(Color("description"))
-                    Text(user.full_name)
+                    Text(user?.full_name ?? "")
                         .font(.title2)
                         .foregroundColor(Color("description"))
                     
@@ -108,12 +108,12 @@ struct Profile: View {
             .padding(.top, 10)
             
             VStack (spacing: 9){
-                Text(user.description)
+                Text(user?.description ?? "")
                     .padding()
                     .font(.body)
                     .foregroundColor(Color("description"))
                 VStack {
-                    Text(user.email)
+                    Text(user?.email ?? "")
                         .padding(.leading)
                     
                 }.padding(.trailing, 170)
@@ -129,6 +129,9 @@ struct Profile: View {
             Spacer(minLength: 0)
             
         }
+        .task {
+            user = await getLoggedUser()
+        }
         //.background(Color("SurfaceBackground").edgesIgnoringSafeArea(.all))
         
     }
@@ -136,6 +139,6 @@ struct Profile: View {
 
 struct ProfilePage_Previews: PreviewProvider {
     static var previews: some View {
-        Profile(user: UserDetails(id: 1, username: "MetroBoomin", email: "example@example.com", full_name: "metro", description: "I am a very professional producer who has worked with a lot of artists of the level of Alvarwu, in my social networks you can take a look at everything I do. ", birth_date: Date(), profile_picture: "", register_date: Date()))
+        Profile()
     }
 }

@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct SplashScreen: View {
+    @Binding var isLoggedIn: Bool
     @State private var isActive = false
     @State private var size = 0.8
     @State private var opacity = 0.5
     
     var body: some View {
-        
         if isActive {
-            LoginPage()
+            if (isLoggedIn) {
+                ContentView()
+            } else {
+                LoginPage(isLoggedIn: $isLoggedIn)
+            }
         } else {
             VStack {
                 VStack {
@@ -47,6 +51,6 @@ struct SplashScreen: View {
 
 struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SplashScreen()
+        SplashScreen(isLoggedIn: .constant(false))
     }
 }
