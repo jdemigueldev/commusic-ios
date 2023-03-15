@@ -13,6 +13,10 @@ struct AddPostPage: View {
     @State private var showImagePicker = false
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
+    @State var isShowingPostCreatedAlert = false
+    @State var shouldNavigateToPostList = false
+    @State private var tabSelection = 0
+    
     var body: some View {
         VStack {
             
@@ -81,85 +85,90 @@ struct AddPostPage: View {
                     .background(Color(.systemGray6))
                     .frame(height: 200)
                     .cornerRadius(5)
-                
-
-                        TextField("Price", value: $price, format: .number )
-                            .padding()
-                            .background(Color(.systemGray6))
-                            .cornerRadius(5)
-                        
-                        Button {
-                            let post = PostCreate(user_id: 1, title: title, description: description, price: price!)
-                            Task {
-                                do {
-                                    try await createPost(post)
-                                    
-                                } catch {
-                                    print("Error al crear el post: \(error.localizedDescription)")
-                                }
-                                
-                            }
-                        } label: {
-                            Text("Submit")
-                        }
-                        .disabled(title.isEmpty || description.isEmpty || price == nil)
-                        .tint(.green)
-                        
-                    }
+                TextField("Price", value: $price, format: .number )
                     .padding()
-                    .buttonStyle(.bordered)
-                Spacer()
+                    .background(Color(.systemGray6))
+                    .cornerRadius(5)
+                
+                
+                
+                Button {
+                    let post = PostCreate(user_id: 1, title: title, description: description, price: price!)
+                    Task {
+                        do {
+                            try await createPost(post)
+                            isShowingPostCreatedAlert = true
+                        } catch {
+                            print("Error al crear el post: \(error.localizedDescription)")
+                        }
+                    }
+                } label: {
+                    Text("Submit")
+                }
+                .disabled(title.isEmpty || description.isEmpty || price == nil)
+                .tint(.green)
+                .alert(isPresented: $isShowingPostCreatedAlert) {
+                    Alert(title: Text("Post creado"), message: Text("El post se ha creado correctamente"), dismissButton: .default(Text("OK"), action: {
+                        title = ""
+                        description = ""
+                        price = nil
+                    }))
+                }
             }
-            .preferredColorScheme(.dark)
             .padding()
-            .sheet(isPresented: $showImagePicker) {
-                ImagePickerView(sourceType: self.sourceType)
-            }
+            .buttonStyle(.bordered)
+            Spacer()
+        }
+        .preferredColorScheme(.dark)
+        .padding()
+        .sheet(isPresented: $showImagePicker) {
+            ImagePickerView(sourceType: self.sourceType)
         }
     }
+}
+
+struct ImagePickerView: UIViewControllerRepresentable {
     
-    struct ImagePickerView: UIViewControllerRepresentable {
-        
-        var sourceType: UIImagePickerController.SourceType
-        
-        func makeCoordinator() -> ImagePickerView.Coordinator {
-            return Coordinator(parent: self)
-        }
-        
-        func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIImagePickerController {
-            let picker = UIImagePickerController()
-            picker.sourceType = sourceType
-            picker.delegate = context.coordinator
-            return picker
-        }
-        
-        func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePickerView>) {
-            
-        }
-        
-        class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-            
-            let parent: ImagePickerView
-            
-            init(parent: ImagePickerView) {
-                self.parent = parent
-            }
-            
-            func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-                picker.dismiss(animated: true)
-            }
-            
-            func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-                picker.dismiss(animated: true)
-            }
-        }
+    var sourceType: UIImagePickerController.SourceType
+    
+    func makeCoordinator() -> ImagePickerView.Coordinator {
+        return Coordinator(parent: self)
+    }
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        picker.sourceType = sourceType
+        picker.delegate = context.coordinator
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePickerView>) {
         
     }
     
-    
-    
-    struct AddPostPage_Previews: PreviewProvider {
-        static var previews: some View {
-            AddPostPage(category: Category.sampleData[0])
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        
+        let parent: ImagePickerView
+        
+        init(parent: ImagePickerView) {
+            self.parent = parent
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            picker.dismiss(animated: true)
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true)
         }
     }
+    
+}
+
+
+
+struct AddPostPage_Previews: PreviewProvider {
+    static var previews: some View {
+        AddPostPage(category: Category.sampleData[0])
+    }
+}

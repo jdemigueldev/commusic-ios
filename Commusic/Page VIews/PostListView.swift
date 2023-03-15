@@ -18,6 +18,9 @@ struct PostListView: View {
                 .task {
                     postsList = await getPosts()
                 }
+                .refreshable {
+                    postsList = await getPosts()
+                }
             }
             .listStyle(PlainListStyle())
             .searchable(text: $searchText)

@@ -1,10 +1,13 @@
 import SwiftUI
 
+
 struct ChatListView: View {
     
     var chats = ["Manoli", "Beckam", "Jazinto", "Richat", "Hitler","Figo","Marcelo","Cr7"]
     
     @State private var searchText = ""
+    
+    
     
     var filteredChats: [String] {
         if searchText.isEmpty {
@@ -15,21 +18,23 @@ struct ChatListView: View {
     }
     
     var body: some View {
-        NavigationView {
-            List(filteredChats, id: \.self) { chat in
-                NavigationLink(destination: ChatView()) {
-                    ChatRow(chatName: chat)
-                    
-                }.listRowSeparatorTint(.gray)
-                    
-            }
-            .padding(.trailing, 20)
-            .padding(.top, 20)
-            .listStyle(PlainListStyle())
-            .searchable(text: $searchText) {
+        VStack {
+            NavigationView {
+                List(filteredChats, id: \.self) { chat in
+                    NavigationLink(destination: ChatView()) {
+                        ChatRow(chatName: chat)
+                        
+                    }.listRowSeparatorTint(.gray)
+                        
+                        
+                }
+                .padding(.trailing, 20)
+                .padding(.top, 20)
+                .listStyle(PlainListStyle())
+                .searchable(text: $searchText) {
+                }
             }
         }.preferredColorScheme(.dark)
-            
     }
 }
 

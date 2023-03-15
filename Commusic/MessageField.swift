@@ -21,13 +21,13 @@ struct MessageField: View {
                 Image(systemName: "paperplane.fill")
                     .foregroundColor(.white)
                     .padding(10)
-                    .background(Color("Peach"))
+                    .background(Color.indigo)
                     .cornerRadius(50)
             }
         }
         .padding(.horizontal)
         .padding(.vertical, 10)
-        .background(Color("Gray"))
+        .background(Color.gray.opacity(0.2))
         .cornerRadius(50)
         .padding()
     }
@@ -50,7 +50,7 @@ struct customTextField: View {
         ZStack (alignment: .leading) {
             if text.isEmpty {
                 placeHolder
-                    .opacity(0.5)
+                    .opacity(0.7)
             }
             
             TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)

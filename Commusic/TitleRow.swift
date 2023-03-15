@@ -24,15 +24,16 @@ struct TitleRow: View {
             VStack (alignment: .leading) {
                 Text(name)
                     .font(.title).bold()
+                    .foregroundColor(.white)
                 Text("online")
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white.opacity(0.6))
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             Image(systemName: "phone.fill")
                 .foregroundColor(.gray)
                 .padding(10)
-                .background(.white)
+                .background(.black.opacity(0.5))
                 .cornerRadius(50)
         }.padding()
     }
@@ -41,6 +42,6 @@ struct TitleRow: View {
 struct TitleRow_Previews: PreviewProvider {
     static var previews: some View {
         TitleRow()
-            .background(Color("Peach"))
+            .background(Color.indigo)
     }
 }

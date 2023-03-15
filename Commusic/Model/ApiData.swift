@@ -11,7 +11,6 @@ public func getPosts() async -> [Post]  {
     }
     do {
         let postsList: [Post]  = try JSONDecoder().decode([Post].self, from: data)
-        print(postsList)
         return postsList
         
     } catch {

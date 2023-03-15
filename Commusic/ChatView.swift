@@ -22,7 +22,7 @@ struct ChatView: View {
                         }
                     }
                     .padding(.top, 10)
-                    .background(.white)
+                    .background(.background)
                     .cornerRadius(30, corners: [.topLeft, .topRight])
                     .onChange(of: messagesManager.lastMessageId) { id in
                         withAnimation {
@@ -32,11 +32,12 @@ struct ChatView: View {
                     }
                 }
             }
-            .background(Color("Peach"))
+            .background(Color.indigo)
             
             MessageField()
                 .environmentObject(messagesManager)
         }
+        
     }
 }
 

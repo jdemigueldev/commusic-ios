@@ -16,7 +16,8 @@ struct MessageBubble: View {
             HStack {
                 Text(message.text)
                     .padding()
-                    .background(message.received ? Color("Gray") : Color("Peach"))
+                    .background(message.received ? Color.gray : Color.indigo)
+                    .foregroundColor(Color.white)
                     .cornerRadius(30)
             }
             .frame(maxWidth: 300, alignment: message.received ? .leading : .trailing)
@@ -27,7 +28,7 @@ struct MessageBubble: View {
             if showTime {
                 Text("\(message.timestamp.formatted(.dateTime.hour().minute()))")
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .padding(message.received ? .leading : .trailing, 25)
             }
         }
@@ -38,6 +39,6 @@ struct MessageBubble: View {
 }
 struct MessageBubble_Previews: PreviewProvider {
     static var previews: some View {
-        MessageBubble(message: Message(id: "12345", text: "Ive been coding swiftUI so long time ago and is fun, i like boobs and penises", received: false, timestamp: Date()))
+        MessageBubble(message: Message(id: "12345", text: "Ive been coding swiftUI so long time ago and is fun, i like boobs and penises", received: true, timestamp: Date()))
     }
 }
